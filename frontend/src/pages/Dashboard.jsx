@@ -165,69 +165,69 @@ export function Dashboard() {
 
                         </div>
                         <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
-                        <Card className="bg-[#1A3A2C] border-none shadow-none" x-chunk="dashboard-01-chunk-5">
-    <CardHeader>
-        <CardTitle className="text-gray-300">Recent Projects</CardTitle>
-    </CardHeader>
-    <CardContent className="grid gap-8">
-        {/* Dummy data for recent projects */}
-        <div className="flex items-center gap-4">
-            <Avatar className="hidden h-9 w-9 sm:flex">
-                <AvatarImage src="/avatars/project1.png" alt="Project Avatar" />
-                <AvatarFallback>PP</AvatarFallback>
-            </Avatar>
-            <div className="grid gap-1">
-                <p className="text-sm font-medium leading-none text-white">Project Phoenix</p>
-                <p className="text-sm text-muted-foreground text-white">by Olivia Martin</p>
-            </div>
-            <div className="ml-auto font-medium text-white">+$50,000.00</div>
-        </div>
-        <div className="flex items-center gap-4">
-            <Avatar className="hidden h-9 w-9 sm:flex">
-                <AvatarImage src="/avatars/project2.png" alt="Project Avatar" />
-                <AvatarFallback>GS</AvatarFallback>
-            </Avatar>
-            <div className="grid gap-1">
-                <p className="text-sm font-medium leading-none text-white">Green Start</p>
-                <p className="text-sm text-muted-foreground text-white">by Jackson Lee</p>
-            </div>
-            <div className="ml-auto font-medium text-white">+$10,000.00</div>
-        </div>
-        <div className="flex items-center gap-4">
-            <Avatar className="hidden h-9 w-9 sm:flex">
-                <AvatarImage src="/avatars/project3.png" alt="Project Avatar" />
-                <AvatarFallback>RS</AvatarFallback>
-            </Avatar>
-            <div className="grid gap-1">
-                <p className="text-sm font-medium leading-none text-white">Renewable Solutions</p>
-                <p className="text-sm text-muted-foreground text-white">by Isabella Nguyen</p>
-            </div>
-            <div className="ml-auto font-medium text-white">+$25,000.00</div>
-        </div>
-        <div className="flex items-center gap-4">
-            <Avatar className="hidden h-9 w-9 sm:flex">
-                <AvatarImage src="/avatars/project4.png" alt="Project Avatar" />
-                <AvatarFallback>SE</AvatarFallback>
-            </Avatar>
-            <div className="grid gap-1">
-                <p className="text-sm font-medium leading-none text-white">Solar Energy Initiative</p>
-                <p className="text-sm text-muted-foreground text-white">by William Kim</p>
-            </div>
-            <div className="ml-auto font-medium text-white">+$15,000.00</div>
-        </div>
-        <div className="flex items-center gap-4">
-            <Avatar className="hidden h-9 w-9 sm:flex">
-                <AvatarImage src="/avatars/project5.png" alt="Project Avatar" />
-                <AvatarFallback>WF</AvatarFallback>
-            </Avatar>
-            <div className="grid gap-1">
-                <p className="text-sm font-medium leading-none text-white">Water for All</p>
-                <p className="text-sm text-muted-foreground text-white">by Sofia Davis</p>
-            </div>
-            <div className="ml-auto font-medium text-white">+$8,000.00</div>
-        </div>
-    </CardContent>
-</Card>
+                            <Card className="bg-[#1A3A2C] border-none shadow-none" x-chunk="dashboard-01-chunk-5">
+                                <CardHeader>
+                                    <CardTitle className="text-gray-300">Recent Projects</CardTitle>
+                                </CardHeader>
+                                <CardContent className="grid gap-8">
+                                    {/* Dummy data for recent projects */}
+                                    <div className="flex items-center gap-4">
+                                        <Avatar className="hidden h-9 w-9 sm:flex">
+                                            <AvatarImage src="/avatars/project1.png" alt="Project Avatar" />
+                                            <AvatarFallback>PP</AvatarFallback>
+                                        </Avatar>
+                                        <div className="grid gap-1">
+                                            <p className="text-sm font-medium leading-none text-white">Project Phoenix</p>
+                                            <p className="text-sm text-muted-foreground text-white">by Olivia Martin</p>
+                                        </div>
+                                        <div className="ml-auto font-medium text-white">+$50,000.00</div>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Avatar className="hidden h-9 w-9 sm:flex">
+                                            <AvatarImage src="/avatars/project2.png" alt="Project Avatar" />
+                                            <AvatarFallback>GS</AvatarFallback>
+                                        </Avatar>
+                                        <div className="grid gap-1">
+                                            <p className="text-sm font-medium leading-none text-white">Green Start</p>
+                                            <p className="text-sm text-muted-foreground text-white">by Jackson Lee</p>
+                                        </div>
+                                        <div className="ml-auto font-medium text-white">+$10,000.00</div>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Avatar className="hidden h-9 w-9 sm:flex">
+                                            <AvatarImage src="/avatars/project3.png" alt="Project Avatar" />
+                                            <AvatarFallback>RS</AvatarFallback>
+                                        </Avatar>
+                                        <div className="grid gap-1">
+                                            <p className="text-sm font-medium leading-none text-white">Renewable Solutions</p>
+                                            <p className="text-sm text-muted-foreground text-white">by Isabella Nguyen</p>
+                                        </div>
+                                        <div className="ml-auto font-medium text-white">+$25,000.00</div>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Avatar className="hidden h-9 w-9 sm:flex">
+                                            <AvatarImage src="/avatars/project4.png" alt="Project Avatar" />
+                                            <AvatarFallback>SE</AvatarFallback>
+                                        </Avatar>
+                                        <div className="grid gap-1">
+                                            <p className="text-sm font-medium leading-none text-white">Solar Energy Initiative</p>
+                                            <p className="text-sm text-muted-foreground text-white">by William Kim</p>
+                                        </div>
+                                        <div className="ml-auto font-medium text-white">+$15,000.00</div>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Avatar className="hidden h-9 w-9 sm:flex">
+                                            <AvatarImage src="/avatars/project5.png" alt="Project Avatar" />
+                                            <AvatarFallback>WF</AvatarFallback>
+                                        </Avatar>
+                                        <div className="grid gap-1">
+                                            <p className="text-sm font-medium leading-none text-white">Water for All</p>
+                                            <p className="text-sm text-muted-foreground text-white">by Sofia Davis</p>
+                                        </div>
+                                        <div className="ml-auto font-medium text-white">+$8,000.00</div>
+                                    </div>
+                                </CardContent>
+                            </Card>
 
                             <Card
                                 className="xl:col-span-2 bg-[#1A3A2C] border-none shadow-none"
