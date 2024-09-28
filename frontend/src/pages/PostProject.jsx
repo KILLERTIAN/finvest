@@ -29,7 +29,7 @@ function PostProject() {
     image: null,
   });
   const [milestoneCount, setMilestoneCount] = useState(2);
-  const { signer, connectWallet } = useContext(WalletContext);
+  const { signer , connectWallet } = useContext(WalletContext);
   const [loading, setLoading] = useState(false);
   const [generating, setGenerating] = useState(false);
   const categories = [
@@ -189,9 +189,11 @@ function PostProject() {
     try {
       setLoading(true);
       console.log("Creating project on blockchain...")
+      await connectWallet();
       if (!signer) {
         await connectWallet();
       }
+
       const transactionHash = await createProjectOnBlockchain(signer, amountInWei, blockchainMilestones);
       setLoading(false)
       console.log('Project created on blockchain with hash:', transactionHash);
