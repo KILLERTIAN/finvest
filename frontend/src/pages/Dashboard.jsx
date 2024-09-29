@@ -110,61 +110,152 @@ export function Dashboard() {
                 </header>
                 <FadeIn direction="up" delay={0.2} fullWidth>
                     <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-                        <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
-                            <Card x-chunk="dashboard-01-chunk-3" className="bg-[#1A3A2C] text-white border-none shadow-none">
+                        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+                            <Card
+                                x-chunk="dashboard-01-chunk-3"
+                                className="bg-[#1A3A2C] text-white border-none shadow-none w-[calc(100vw-40px)] sm:max-w-full mx-auto"
+                            >
                                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                                     <CardTitle className="text-sm font-medium text-gray-300">Active Projects</CardTitle>
                                     <Activity className="h-4 w-4 text-[#2FB574]" />
                                 </CardHeader>
                                 <CardContent>
                                     <div className="text-2xl font-bold">2</div>
-                                    <p className="text-xs text-gray-400">
-                                        +2 from last month                                    </p>
+                                    <p className="text-xs text-gray-400">+2 from last month</p>
                                 </CardContent>
                             </Card>
-                            <Card x-chunk="dashboard-01-chunk-0" className="bg-[#1A3A2C] text-white border-none shadow-none">
+
+                            <Card
+                                x-chunk="dashboard-01-chunk-0"
+                                className="bg-[#1A3A2C] text-white border-none shadow-none w-[calc(100vw-40px)] sm:max-w-full mx-auto"
+                            >
                                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                    <CardTitle className="text-sm font-medium text-gray-300">
-                                        Funds Raised
-                                    </CardTitle>
+                                    <CardTitle className="text-sm font-medium text-gray-300">Funds Raised</CardTitle>
                                     <DollarSign className="h-4 w-4 text-[#2FB574]" />
                                 </CardHeader>
                                 <CardContent>
                                     <div className="text-2xl font-bold">$45,231.89</div>
-                                    <p className="text-xs text-gray-400">
-                                        +20.1% from last month
-                                    </p>
+                                    <p className="text-xs text-gray-400">+20.1% from last month</p>
                                 </CardContent>
                             </Card>
-                            <Card x-chunk="dashboard-01-chunk-1" className="bg-[#1A3A2C] text-white border-none shadow-none">
+
+                            <Card
+                                x-chunk="dashboard-01-chunk-1"
+                                className="bg-[#1A3A2C] text-white border-none shadow-none w-[calc(100vw-40px)] sm:max-w-full mx-auto"
+                            >
                                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                    <CardTitle className="text-sm font-medium text-gray-300">
-                                        Investors
-                                    </CardTitle>
+                                    <CardTitle className="text-sm font-medium text-gray-300">Investors</CardTitle>
                                     <Users className="h-4 w-4 text-[#2FB574]" />
                                 </CardHeader>
                                 <CardContent>
                                     <div className="text-2xl font-bold">+230</div>
-                                    <p className="text-xs text-gray-400">
-                                        +10.1% from last month
-                                    </p>
+                                    <p className="text-xs text-gray-400">+10.1% from last month</p>
                                 </CardContent>
                             </Card>
-                            <Card x-chunk="dashboard-01-chunk-2" className="bg-[#1A3A2C] text-white border-none shadow-none">
+
+                            <Card
+                                x-chunk="dashboard-01-chunk-2"
+                                className="bg-[#1A3A2C] text-white border-none shadow-none w-[calc(100vw-40px)] sm:max-w-full mx-auto"
+                            >
                                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                                     <CardTitle className="text-sm font-medium text-gray-300">Posts Engagement</CardTitle>
                                     <CreditCard className="h-4 w-4 text-[#2FB574]" />
                                 </CardHeader>
                                 <CardContent>
                                     <div className="text-2xl font-bold">+12,234</div>
-                                    <p className="text-xs text-gray-400">
-                                        +19% from last month
-                                    </p>
+                                    <p className="text-xs text-gray-400">+19% from last month</p>
                                 </CardContent>
                             </Card>
-
                         </div>
                         <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                            
+
+                            <Card
+                                className="xl:col-span-2 bg-[#1A3A2C] border-none shadow-none "
+                                x-chunk="dashboard-01-chunk-4"
+                            >
+                                <CardHeader className="flex flex-row items-center">
+                                    <div className="grid gap-2">
+                                        <CardTitle className="text-gray-300">Transactions</CardTitle>
+                                        <CardDescription className="text-gray-400">Recent transactions from your projects.</CardDescription>
+                                    </div>
+                                    <Button asChild size="sm" className="ml-auto gap-1 text-[#2FB574]">
+                                        <Link href="#">
+                                            View All
+                                            <ArrowUpRight className="h-4 w-4" />
+                                        </Link>
+                                    </Button>
+                                </CardHeader>
+                                <CardContent>
+                                    <Table className="bg-[#1A3A2C] text-white">
+                                        <TableHeader>
+                                            <TableRow className="hover:bg-[#2C5440]">
+                                                <TableHead className="text-gray-400">Project Name</TableHead>
+                                                <TableHead className="text-gray-400">Investor Name</TableHead>
+                                                <TableHead className="hidden sm:table-cell text-gray-400">Date</TableHead>
+                                                <TableHead className="text-right text-gray-400">Amount</TableHead>
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody>
+                                            <TableRow className="hover:bg-[#2C5440]">
+                                                <TableCell>
+                                                    <div className="font-medium text-white line-clamp-1">Green Energy Initiative</div>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <div className="font-medium text-white">Liam Johnson</div>
+                                                    <div className="hidden text-sm text-gray-500 md:inline">liam@example.com</div>
+                                                </TableCell>
+                                                <TableCell className="hidden sm:table-cell text-white">2023-09-15</TableCell>
+                                                <TableCell className="text-right font-medium">
+                                                    <span className="text-[#2FB574]">+ $1,000.00</span>
+                                                </TableCell>
+                                            </TableRow>
+
+                                            <TableRow className="hover:bg-[#2C5440]">
+                                                <TableCell>
+                                                    <div className="font-medium text-white line-clamp-1">Tech for Schools</div>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <div className="font-medium text-white">Olivia Smith</div>
+                                                    <div className="hidden text-sm text-gray-500 md:inline">olivia@example.com</div>
+                                                </TableCell>
+                                                <TableCell className="hidden sm:table-cell text-white">2023-09-14</TableCell>
+                                                <TableCell className="text-right font-medium">
+                                                    <span className="text-[#2FB574]">+ $500.00</span>
+                                                </TableCell>
+                                            </TableRow>
+
+                                            <TableRow className="hover:bg-[#2C5440]">
+                                                <TableCell>
+                                                    <div className="font-medium text-white line-clamp-1">Water Conservation Fund</div>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <div className="font-medium text-white">Noah Williams</div>
+                                                    <div className="hidden text-sm text-gray-500 md:inline">noah@example.com</div>
+                                                </TableCell>
+                                                <TableCell className="hidden sm:table-cell text-white">2023-09-13</TableCell>
+                                                <TableCell className="text-right font-medium">
+                                                    <span className="text-[#2FB574]">+ $750.00</span>
+                                                </TableCell>
+                                            </TableRow>
+
+                                            <TableRow className="hover:bg-[#2C5440]">
+                                                <TableCell>
+                                                    <div className="font-medium text-white line-clamp-1">Healthcare for All</div>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <div className="font-medium text-white">Emma Brown</div>
+                                                    <div className="hidden text-sm text-gray-500 md:inline">emma@example.com</div>
+                                                </TableCell>
+                                                <TableCell className="hidden sm:table-cell text-white">2023-09-12</TableCell>
+                                                <TableCell className="text-right font-medium">
+                                                    <span className="text-red-500">- $2,000.00</span>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableBody>
+                                    </Table>
+                                </CardContent>
+                            </Card>
                             <Card className="bg-[#1A3A2C] border-none shadow-none" x-chunk="dashboard-01-chunk-5">
                                 <CardHeader>
                                     <CardTitle className="text-gray-300">Recent Projects</CardTitle>
@@ -228,90 +319,6 @@ export function Dashboard() {
                                     </div>
                                 </CardContent>
                             </Card>
-
-                            <Card
-                                className="xl:col-span-2 bg-[#1A3A2C] border-none shadow-none"
-                                x-chunk="dashboard-01-chunk-4"
-                            >
-                                <CardHeader className="flex flex-row items-center">
-                                    <div className="grid gap-2">
-                                        <CardTitle className="text-gray-300">Transactions</CardTitle>
-                                        <CardDescription className="text-gray-400">
-                                            Recent transactions from your projects.
-                                        </CardDescription>
-                                    </div>
-                                    <Button asChild size="sm" className="ml-auto gap-1 text-[#2FB574]">
-                                        <Link href="#">
-                                            View All
-                                            <ArrowUpRight className="h-4 w-4" />
-                                        </Link>
-                                    </Button>
-                                </CardHeader>
-                                <CardContent>
-                                    <Table className="bg-[#1A3A2C] text-white">
-                                        <TableHeader>
-                                            <TableRow className="hover:bg-[#2C5440]">
-                                                <TableHead className="text-gray-400">Project Name</TableHead>
-                                                <TableHead className="text-gray-400">Investor Name</TableHead>
-                                                <TableHead className="text-gray-400">Type</TableHead>
-                                                <TableHead className="text-gray-400">Date</TableHead>
-                                                <TableHead className="text-right text-gray-400">Amount</TableHead>
-                                            </TableRow>
-                                        </TableHeader>
-                                        <TableBody>
-                                            <TableRow className="hover:bg-[#2C5440]">
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Green Energy Initiative</div>
-                                                </TableCell>
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Liam Johnson</div>
-                                                    <div className="hidden text-sm text-gray-500 md:inline">liam@example.com</div>
-                                                </TableCell>
-                                                <TableCell className=" text-white">Investment</TableCell>
-                                                <TableCell className=" text-white">2023-09-15</TableCell>
-                                                <TableCell className="text-right text-white">$1,000.00</TableCell>
-                                            </TableRow>
-                                            <TableRow className="hover:bg-[#2C5440]">
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Tech for Schools</div>
-                                                </TableCell>
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Olivia Smith</div>
-                                                    <div className="hidden text-sm text-gray-500 md:inline">olivia@example.com</div>
-                                                </TableCell>
-                                                <TableCell className=" text-white">Donation</TableCell>
-                                                <TableCell className=" text-white">2023-09-14</TableCell>
-                                                <TableCell className="text-right text-white">$500.00</TableCell>
-                                            </TableRow>
-                                            <TableRow className="hover:bg-[#2C5440]">
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Water Conservation Fund</div>
-                                                </TableCell>
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Noah Williams</div>
-                                                    <div className="hidden text-sm text-gray-500 md:inline">noah@example.com</div>
-                                                </TableCell>
-                                                <TableCell className=" text-white">Pledge</TableCell>
-                                                <TableCell className=" text-white">2023-09-13</TableCell>
-                                                <TableCell className="text-right text-white">$750.00</TableCell>
-                                            </TableRow>
-                                            <TableRow className="hover:bg-[#2C5440]">
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Healthcare for All</div>
-                                                </TableCell>
-                                                <TableCell>
-                                                    <div className="font-medium text-white">Emma Brown</div>
-                                                    <div className="hidden text-sm text-gray-500 md:inline">emma@example.com</div>
-                                                </TableCell>
-                                                <TableCell className=" text-white">Investment</TableCell>
-                                                <TableCell className=" text-white">2023-09-12</TableCell>
-                                                <TableCell className="text-right text-white">$2,000.00</TableCell>
-                                            </TableRow>
-                                        </TableBody>
-                                    </Table>
-                                </CardContent>
-                            </Card>
-
                         </div>
                     </main>
                 </FadeIn>

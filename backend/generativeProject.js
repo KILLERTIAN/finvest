@@ -126,6 +126,30 @@ export async function generateProjectContent(prompt) {
                   {text: "{\n  \"title\": \"Empowering Youth Through Urban Gardening\",\n  \"description\": \"This project aims to create a vibrant urban garden space where young people can learn about sustainable agriculture, healthy eating, and environmental stewardship. We'll offer hands-on workshops, gardening classes, and community events, empowering youth to become active participants in their community and advocate for a greener future. We're seeking funding to purchase gardening tools, seeds, and materials to transform a vacant lot into a thriving urban oasis.\",\n  \"amountNeeded\": \"8000\",\n  \"minDonation\": \"10\",\n  \"category\": \"Community Development & Education\",\n  \"milestones\": [\n    {\n      \"title\": \"Secure Urban Garden Space\",\n      \"description\": \"Identify and secure a suitable vacant lot or unused space within the community for the urban garden.\",\n      \"completionDate\": \"2024-04-30\",\n      \"amountRequired\": \"2000\"\n    },\n    {\n      \"title\": \"Purchase Gardening Tools and Materials\",\n      \"description\": \"Acquire essential tools, seeds, soil, and other materials needed to establish and maintain the urban garden.\",\n      \"completionDate\": \"2024-06-30\",\n      \"amountRequired\": \"3000\"\n    },\n    {\n      \"title\": \"Develop Educational Programs and Workshops\",\n      \"description\": \"Create engaging educational programs and workshops for youth, covering topics like sustainable gardening, healthy eating, and environmental awareness.\",\n      \"completionDate\": \"2024-08-31\",\n      \"amountRequired\": \"2000\"\n    },\n    {\n      \"title\": \"Launch Community Garden Events\",\n      \"description\": \"Organize community events and workshops to engage youth and the wider community in the urban garden project.\",\n      \"completionDate\": \"2024-10-31\",\n      \"amountRequired\": \"1000\"\n    }\n  ]\n}"},
                 ],
               },
+              {
+                role: "user",
+                parts: [
+                  {text: "genrate me a post about a calamity in haryana. we needs around 10k urgently, genrate me data in json"},
+                ],
+              },
+              {
+                role: "model",
+                parts: [
+                  {text: "\n{\n  \"title\": \"Urgent Help Needed: Calamity Strikes Haryana\",\n  \"description\": \"A devastating calamity has struck Haryana, leaving families in dire need of assistance. Homes have been destroyed, livelihoods lost, and countless people are struggling to survive. We are urgently seeking donations to provide immediate relief, including food, shelter, medical supplies, and essential necessities. Every contribution, no matter how small, will make a difference in the lives of those affected. Please donate generously and help us bring hope to those in need.\",\n  \"amountNeeded\": \"10000\",\n  \"minDonation\": \"5\",\n  \"category\": \"Disaster Relief & Humanitarian Aid\",\n  \"milestones\": [\n    {\n      \"title\": \"Provide Immediate Relief Supplies\",\n      \"description\": \"Distribute food, water, blankets, and other essential items to affected families.\",\n      \"completionDate\": \"2024-03-15\",\n      \"amountRequired\": \"5000\"\n    },\n    {\n      \"title\": \"Support Medical Needs\",\n      \"description\": \"Provide medical supplies, first aid kits, and access to healthcare for injured individuals.\",\n      \"completionDate\": \"2024-03-22\",\n      \"amountRequired\": \"3000\"\n    },\n    {\n      \"title\": \"Temporary Shelter and Housing Assistance\",\n      \"description\": \"Secure temporary shelter and provide assistance with rebuilding homes for those who lost their homes.\",\n      \"completionDate\": \"2024-03-29\",\n      \"amountRequired\": \"2000\"\n    }\n  ]\n}"},
+                ],
+              },
+              {
+                role: "user",
+                parts: [
+                  {text: "genrate me a post about our hospital , we want to buy some , beds and some eye related equipments and we need around 20 thousand rupees"},
+                ],
+              },
+              {
+                role: "model",
+                parts: [
+                  {text: "\n{\n  \"title\": \"Help Us Provide Better Care: Equipping Our Hospital for Healing\",\n  \"description\": \"Our hospital is dedicated to providing quality healthcare to our community, but we need your help to upgrade our facilities. We are raising funds to purchase essential medical equipment, including new beds for our patients and specialized instruments for eye care. These upgrades will allow us to provide more comfortable and effective treatment, ensuring the well-being of those who rely on our services. Every contribution, big or small, will make a difference in the lives of our patients. Please join us in our mission to provide exceptional healthcare by donating today.\",\n  \"amountNeeded\": \"20000\",\n  \"minDonation\": \"10\",\n  \"category\": \"Healthcare & Medical Equipment\",\n  \"milestones\": [\n    {\n      \"title\": \"Purchase New Hospital Beds\",\n      \"description\": \"Acquire comfortable and durable beds to provide a better experience for our patients during their stay.\",\n      \"completionDate\": \"2024-04-15\",\n      \"amountRequired\": \"10000\"\n    },\n    {\n      \"title\": \"Invest in Eye Care Equipment\",\n      \"description\": \"Purchase specialized instruments and tools to enhance our eye care services and provide more accurate diagnoses and treatments.\",\n      \"completionDate\": \"2024-05-15\",\n      \"amountRequired\": \"10000\"\n    }\n  ]\n}\n"},
+                ],
+              },
             ],
             
         });

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { HeartIcon, Share2, Search, MessageCircle, Send, PlusCircle } from 'lucide-react';
+import { HeartIcon, Share2, Search, MessageCircle, Send, PlusCircle, ArrowBigUpDash, ArrowBigDownDash } from 'lucide-react';
 import Sidebar from '@/components/Sidebar';
 import FadeIn from '@/components/FadeIn';
 import UserProfileIcon from '@/components/ui/UserProfileIcon';
@@ -124,7 +124,7 @@ function PostsPage() {
                                         <CardContent className="p-4 flex-grow">
                                             <p>{post.description}</p>
                                         </CardContent>
-                                        <CardFooter className="flex md:flex-row flex-col gap-4 md:gap-0 justify-between items-center">
+                                        <CardFooter className="flex lg:flex-row flex-col gap-6 md:gap-4  justify-between items-center">
                                             <div className="flex items-center gap-2">
                                                 <Button
                                                     variant="ghost"
@@ -133,7 +133,7 @@ function PostsPage() {
                                                 >
                                                     <HeartIcon
                                                         className="w-5 h-5"
-                                                        fill={userLikes[post.id] ? '#ff4d4f' : 'none'} 
+                                                        fill={userLikes[post.id] ? '#ff4d4f' : 'none'}
                                                         stroke={userLikes[post.id] ? '#ff4d4f' : 'currentColor'}
                                                     />
                                                     {post.likes}
@@ -148,9 +148,23 @@ function PostsPage() {
                                                     {post.comments.length}
                                                 </Button>
                                             </div>
-                                            <Button className="bg-[#2FB574] text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors">
-                                                Invest
-                                            </Button>
+                                            <div className="flex flex-row gap-4 items-center justify-center">
+                                                <Button
+                                                    className="px-4 py-2 bg-[#2FB574] hover:bg-[#0c2f1f] text-white rounded-md transition-colors duration-300"
+                                                >
+                                                    <ArrowBigUpDash className="h-5 w-5 mr-2" />
+                                                    Upvote
+                                                </Button>
+                                                <Button
+                                                    className="px-4 py-2 bg-[#0c2f1f] hover:bg-[#0c2f1f] text-white rounded-md transition-colors duration-300"
+                                                >
+                                                    <ArrowBigDownDash className="h-5 w-5 mr-2" />
+                                                    Downvote
+                                                </Button>
+                                                {/* <Button className="bg-[#2FB574] text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors">
+                                                    Invest
+                                                </Button> */}
+                                            </div>
                                         </CardFooter>
                                     </div>
                                     <div className="flex-2 p-4 pt-2 bg-[#13261F] md:border-l border-t md:border-t-0 border-gray-600">
