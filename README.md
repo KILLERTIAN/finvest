@@ -1,13 +1,40 @@
-# FINVEST #
+#  <img src="https://res.cloudinary.com/djoebsejh/image/upload/v1721187808/srktgdcijec0zqmlgvbh.png" alt="Finvest Logo" width="30" /> **Finvest: Blockchain Crowdfunding Platform**  
 
-This project is made as part of a blockchain-based finance project 
+## 🌟 **Overview**
+Finvest is a blockchain-powered platform designed to support **startups, NGOs, charities**, and other initiatives. With **milestone-based fund allocation**, **Ethereum transactions**, and **AI-powered project management**, Finvest ensures a transparent, secure, and modern crowdfunding experience. 
 
-Deployed Link: [finvest-2.vercel.app](https://finvest-2.vercel.app)
+## ✨ **Features**
+- 🔑 **Milestone-based Funding**: Release funds only when project milestones are achieved.
+- 🔐 **Blockchain Security**: Built on Ethereum for decentralized, trustless operations.
+- 🖼️ **NFT Contributions**: Contributors receive NFTs as proof of participation.
+- 🤖 **AI Project Management**: Smart project planning and milestone tracking.
+- 💬 **Real-time Social Features**: Engage with creators and funders via live chat.
+- 🔗 **Wallet Integration**: Seamless Ethereum wallet connection using **RainbowKit** and **WalletConnect**.
 
-Preview : 
+## 💻 **Smart Contract**
+**Contract Address**: `0x0cd118073a8ff6026ae465621664b277e32e2843`
 
-![image](https://github.com/user-attachments/assets/8f6785e6-b860-404b-bcb7-20f7a9e7fa65)
+### ⚙️ **Core Functionalities**
+- **Project Creation**: Start new projects with detailed goals and milestones.
+- **Contribution Handling**: Funders contribute using Ethereum; transactions are recorded on-chain.
+- **NFT Minting**: Every contribution mints an NFT as proof of participation.
+- **Milestone Tracking**: Funds released based on successful milestone completion.
 
-![image](https://github.com/user-attachments/assets/5e5bca35-a221-4c50-8696-fcb98e0aa3d4)
+## 🛠️ **Tech Stack**
+- **Frontend**: [React.js](https://reactjs.org), [Web3.js](https://web3js.readthedocs.io)
+- **Blockchain**: [Solidity](https://soliditylang.org), [Ethereum](https://ethereum.org)
+- **AI**: [OpenAI API](https://openai.com)
+- **Smart Contract Development**: [Hardhat](https://hardhat.org)
+- **Wallet Integration**: [RainbowKit](https://rainbowkit.com), [WalletConnect](https://walletconnect.com)
 
-![image](https://github.com/user-attachments/assets/911109b2-d606-4d0b-9b04-f4b6ab8de27e)
+## 🌍 **Deployment Details**
+- **Live Application**: [Finvest Live](https://finvest-2.vercel.app)
+- **Smart Contract Address**: `0x0cd118073a8ff6026ae465621664b277e32e2843`
+- **Network**: Ethereum Mainnet
+- **Demo Vido Link**: https://drive.google.com/file/d/1UY5Dg9_JiU7y9lR9tbbAefoYGpvIXZiD/view?usp=drive_link
+## ⚡ **Quick Start**
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/username/finvest.git
+   cd finvest
