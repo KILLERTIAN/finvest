@@ -23,7 +23,7 @@ Finvest is a blockchain-powered platform designed to support **startups, NGOs, c
 ## 🛠️ **Tech Stack**
 - **Frontend**: [React.js](https://reactjs.org), [Web3.js](https://web3js.readthedocs.io)
 - **Blockchain**: [Solidity](https://soliditylang.org), [Ethereum](https://ethereum.org)
-- **AI**: [OpenAI API](https://openai.com)
+- **AI**: [Gemini API]
 - **Smart Contract Development**: [Hardhat](https://hardhat.org)
 - **Wallet Integration**: [RainbowKit](https://rainbowkit.com), [WalletConnect](https://walletconnect.com)
 
