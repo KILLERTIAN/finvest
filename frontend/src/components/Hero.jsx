@@ -16,7 +16,6 @@ function Hero() {
                 <h1 className="text-5xl lg:w-[60%] md:text-7xl font-semibold text-center py-3 z-[5] gradient-text">
                     Investment and Raising Funds Made Easy
                 </h1>
-
             </FadeIn>
             <FadeIn direction="down" delay={0.3} fullWidth>
                 <h3 className="md:text-xl  text-center py-3 z-[5] md:w-[75%] font-semibold bg-gradient-to-b from-white via-green-100 to-green-200 bg-clip-text text-transparent">
@@ -43,14 +42,14 @@ function Hero() {
                 <FadeIn direction="right" delay={0.3} fullWidth >
                     <img
                         className="p-4 md:py-10 md:pl-10 py-5 z-[5]"
-                        src="https://res.cloudinary.com/djoebsejh/image/upload/v1721138970/tytilyc36ct3ckq7xruz.svg"
+                        src="https://res.cloudinary.com/djoebsejh/image/upload/v1727974058/h9ekm3aaioaup7otisit.svg"
                         alt="Illustration"
                     />
                 </FadeIn>
                 <FadeIn direction="left" delay={0.3} fullWidth >
                     <img
                         className="p-4 md:py-10 md:pr-10 py-5 z-[5]"
-                        src="https://res.cloudinary.com/djoebsejh/image/upload/v1721138973/kfwbumqxvchpwiwxa2hf.svg"
+                        src="https://res.cloudinary.com/djoebsejh/image/upload/v1727974057/anenlzmnppineaevg5xe.svg"
                         alt="Illustration"
                     />
                 </FadeIn>
