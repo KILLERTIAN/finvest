@@ -28,7 +28,7 @@ app.use('/', router);
 Connection();
 
 // Ping service URL
-const SERVICE_URL = 'https://finvest-bub4.onrender.com';
+const SERVICE_URL = 'https://finvest-backend.onrender.com';
 
 // Function to ping the service
 const pingService = () => {

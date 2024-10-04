@@ -33,7 +33,7 @@ function NewPost() {
     const generateContent = async () => {
         setGenerating(true);
         const urls = [
-            'https://finvest-bub4.onrender.com/generate-content',
+            'https://finvest-backend.onrender.com/generate-content',
             'http://localhost:8000/generate-content',
         ];
 
@@ -78,7 +78,7 @@ function NewPost() {
         setPosting(true);
 
         const urls = [
-            'https://finvest-bub4.onrender.com/post/new-post',
+            'https://finvest-backend.onrender.com/post/new-post',
             'http://localhost:8000/post/new-post',
         ];
 

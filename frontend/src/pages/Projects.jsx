@@ -38,7 +38,7 @@ function Projects() {
     const { isLoggedIn, user } = useAuth();
     useEffect(() => {
         const urls = [
-            'https://finvest-bub4.onrender.com/project/getAllProjects',
+            'https://finvest-backend.onrender.com/project/getAllProjects',
             'http://localhost:8000/project/getAllProjects',
             // '/projects.json'
         ];

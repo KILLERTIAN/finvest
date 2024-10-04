@@ -50,7 +50,7 @@ function PostProject() {
   const generateContent = async () => {
     setGenerating(true);
     const urls = [
-      'https://finvest-bub4.onrender.com/generate-project-content',
+      'https://finvest-backend.onrender.com/generate-project-content',
       // 'http://localhost:8000/generate-project-content',
     ];
 
@@ -221,8 +221,8 @@ function PostProject() {
       //   data.append("milestones", JSON.stringify(formData.milestones));
       // data.append('blockchainHash', transactionHash); // Pass the blockchain transaction hash
       // http://localhost:8000/project/create
-      // https://finvest-bub4.onrender.com/project/create
-      //https://finvest-bub4.onrender.com
+      // https://finvest-backend.onrender.com/project/create
+      //https://finvest-backend.onrender.com
 
       const response = await fetch("http://localhost:8000/project/create", {
         method: "POST",

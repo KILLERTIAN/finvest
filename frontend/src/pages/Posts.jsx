@@ -21,7 +21,7 @@ function PostsPage() {
 
     useEffect(() => {
         const urls = [
-            'https://finvest-bub4.onrender.com/posts',
+            'https://finvest-backend.onrender.com/posts',
             'http://localhost:8000/posts',
         ];
 
