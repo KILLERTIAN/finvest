@@ -224,7 +224,7 @@ function PostProject() {
       // https://finvest-backend.onrender.com/project/create
       //https://finvest-backend.onrender.com
 
-      const response = await fetch("http://localhost:8000/project/create", {
+      const response = await fetch("https://finvest-backend.onrender.com/project/create", {
         method: "POST",
         body: data,
         headers: {},

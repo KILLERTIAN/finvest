@@ -13,7 +13,7 @@ function Feature() {
                 <div className=" flex flex-col lg:flex-row z-[5] items-center justify-between rounded-[40px] overflow-hidden bg-[#2FB574] bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-lg p-10 pb-0 pr-0 lg:px-20 lg:p-10 xl:py-28 mt-10 lg:mt-40 w-[90%]">
                     <div className=" relative flex flex-col items-start justify-center  lg:max-w-[50%] z-10 pr-4">
                         <img className="m-0" src="https://res.cloudinary.com/djoebsejh/image/upload/v1721199942/taavtz4rowx8ovojuw2z.png" alt="Service Icon" />
-                        <FadeIn direction="up" delay={0.3} fullWidth>
+                        <FadeIn direction="up" delay={0.3} >
                             <h2 className="md:text-5xl text-3xl text-white font-semibold py-3 text-left">
                                 Our Best Services <br /> For Your Convenience
                             </h2>

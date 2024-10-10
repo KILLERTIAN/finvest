@@ -22,7 +22,7 @@ function Services() {
             
             <div className="flex xl:flex-row flex-col items-center justify-center gap-[60px] py-10">
                 {[
-                    { title: "Guaranteed Safety", imgSrc: "https://res.cloudinary.com/djoebsejh/image/upload/v1721135409/kvyqt6yrr3rotoysioou.png", delay: 0.3, description: "With blockchain technology, all transactions are immutable and transparent, ensuring the highest level of security for your investments." },
+                    { title: "Guaranteed Safety", imgSrc: "https://res.cloudinary.com/djoebsejh/image/upload/v1721135409/kvyqt6yrr3rotoysioou.png", delay: 0.3, description: "With blockchain, all transactions are immutable and transparent, ensuring the highest level of security for your investments." },
                     { title: "All in One App", imgSrc: "https://res.cloudinary.com/djoebsejh/image/upload/v1721135412/hundmnkts9bfynfniadf.png", delay: 0.5, description: "Manage all your fundraising and investments in one place, with real-time tracking and easy access to detailed analytics." },
                     { title: "Easy to Use", imgSrc: "https://res.cloudinary.com/djoebsejh/image/upload/v1721135411/lp1e6eqbysx1iwld4fsl.png", delay: 0.7, description: "Our intuitive interface ensures that anyone can easily participate in fundraising or investing, regardless of their experience." },
                 ].map((card, index) => (

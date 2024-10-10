@@ -30,7 +30,7 @@ function Why() {
                         </div>
                     </FadeIn>
 
-                    <FadeIn direction="left" delay={0.3} fullWidth>
+                    <FadeIn direction="right" delay={0.3} fullWidth>
                         <div className="flex items-start justify-center flex-col xl:w-[500px] lg:w-[500px] md:w-[500px] w-[300px] md:p-10 py-10 border-b-2 xl:border-b-0 border-slate-300">
                             <img className="md:h-[90px] md:w-[90px] h-[50px] w-[50px]" src="https://res.cloudinary.com/djoebsejh/image/upload/v1721144151/hmumo7sd71pg9n69gi4j.png" alt="" />
                             <h3 className="md:text-3xl text-2xl text-white font-semibold text-center py-4">Minimal Risk</h3>
@@ -42,9 +42,9 @@ function Why() {
 
                 {/* Right Side - AI Auto-Fill & Transparency */}
                 <div className="flex flex-col items-center justify-center xl:pt-20">
-                    <FadeIn direction="right" delay={0.4} fullWidth>
+                    <FadeIn direction="left" delay={0.4} fullWidth>
                         <div className="flex items-start justify-center flex-col xl:w-[500px] lg:w-[500px] md:w-[500px] w-[300px] md:p-10 py-10 border-b-2 xl:border-b-1 border-slate-300">
-                            <img className="md:h-[90px] md:w-[90px] h-[50px] w-[50px]" src="https://res.cloudinary.com/djoebsejh/image/upload/v1721144151/yyel7glhilcwz4yyfnbd.png" alt="" />
+                            <img className="md:h-[90px] md:w-[90px] h-[50px] w-[50px]" src="https://res.cloudinary.com/djoebsejh/image/upload/v1728048432/Prescription_Testres/lqrctsvgxqxcen1tubfs.png" alt="" />
                             <h3 className="md:text-3xl text-2xl text-white font-semibold text-center py-4">AI Auto-Fill</h3>
                             <img src="https://res.cloudinary.com/djoebsejh/image/upload/v1721144165/v6o5c2lt8snirw1deumc.png" alt="" />
                             <h4 className="md:text-3xl text-xl text-white font-extralight py-4">
