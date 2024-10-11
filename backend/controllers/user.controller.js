@@ -4,8 +4,8 @@ import User from '../models/User.model.js';
 // Secret keys for JWT
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_SECRET_KEY;
 const REFRESH_TOKEN_SECRET = process.env.REFRESH_SECRET_KEY;
-const TOKEN_EXPIRATION_TIME = '15m'; // Access token expiry time
-const REFRESH_TOKEN_EXPIRATION_TIME = '7d'; // Refresh token expiry time
+const TOKEN_EXPIRATION_TIME = '15m';
+const REFRESH_TOKEN_EXPIRATION_TIME = '7d'; 
 
 // Generate access and refresh tokens
 const generateTokens = (user) => {
@@ -132,7 +132,6 @@ export const refreshToken = async (req, res) => {
         res.status(500).json({ message: 'Error refreshing token', error });
     }
 };
-
 
 // User logout
 export const logout = async (req, res) => {

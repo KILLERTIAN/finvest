@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import FadeIn from "@/components/FadeIn";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export function Login() {
     const [formData, setFormData] = useState({
@@ -133,9 +134,7 @@ export function Login() {
                         <Button type="submit" className="w-full bg-[#1B7A57] hover:bg-[#0e3a26] text-white py-2 rounded-md" disabled={loading}>
                             {loading ? 'Logging in...' : 'Login'}
                         </Button>
-                        <Button variant="outline" className="w-full border-[#1B7A57] text-[#1B7A57] py-2 rounded-md">
-                            Login with Google
-                        </Button>
+                        <ConnectButton/>
                     </form>
                     <div className="mt-4 text-center text-md text-[#E8F6F3]">
                         Don&apos;t have an account?{" "}

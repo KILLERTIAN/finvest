@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ChevronRight } from 'lucide-react'; // Ensure you have this icon library installed
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const AccountSection = ({ sectionRef, formData, handleChange, connectWallet, scrollToSection }) => {
   return (
@@ -11,8 +12,8 @@ const AccountSection = ({ sectionRef, formData, handleChange, connectWallet, scr
         <div className="space-y-6">
           {/* Connect Wallet */}
           <div className="space-y-4">
-            <div className="text-xl md:text-2xl font-semibold">Connect Wallet</div>
-            <div className="flex flex-wrap justify-center gap-4">
+            {/* <div className="text-xl md:text-2xl font-semibold">Connect Wallet</div> */}
+            {/* <div className="flex flex-wrap justify-center gap-4">
               <Button
                 onClick={connectWallet}
                 className="flex items-center justify-center bg-black hover:bg-stone-700 rounded-md p-4 transition ease-in-out w-32 text-center text-white"
@@ -54,7 +55,8 @@ const AccountSection = ({ sectionRef, formData, handleChange, connectWallet, scr
                 />
                 <span className="hidden md:inline">Trust Wallet</span>
               </Button>
-            </div>
+            </div> */}
+            <ConnectButton/>
           </div>
 
           {/* Change Password */}

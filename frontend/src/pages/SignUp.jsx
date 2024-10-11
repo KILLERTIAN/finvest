@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import FadeIn from "@/components/FadeIn";
 import '../App.css';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 
 // const { name, email, password, country, role, profileImage } = req.body;
@@ -13,7 +14,8 @@ export function SignUp() {
         name: '',
         email: '',
         password: '',
-        role: '' 
+        role: '',
+        
     });
 
     const [selection, setSelection] = useState(null);
@@ -192,6 +194,7 @@ export function SignUp() {
                                         required
                                     />
                                 </div>
+                                <ConnectButton/>
                                 <Button type="submit" className="mt-4 bg-[#1B7A57] hover:bg-[#154d3d]">
                                     {loading ? 'Signing up...' : 'Sign Up'}
                                 </Button>

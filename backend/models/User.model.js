@@ -10,6 +10,8 @@ const userSchema = new mongoose.Schema({
     role: { type: String, enum: ["Investor", "Organisation"], required: true },
     accessToken: { type: String },
     refreshToken: { type: String },
+    // walletAddress: { type: String },  // Added for RainbowKit wallet integration
+    analytics: { type: String },  // Added for detailed analytics
 }, { timestamps: true });
 
 // Password hashing middleware

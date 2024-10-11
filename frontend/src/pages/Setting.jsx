@@ -1,7 +1,5 @@
 import { useState, useRef, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import { HashLink } from 'react-router-hash-link';
-import { WalletContext } from '@/context/WalletContext';
 import Sidebar from '@/components/Sidebar';
 // import WalletConnectButton from '@/components/WalletConnectButton';
 import UserProfileIcon from '@/components/ui/UserProfileIcon';
@@ -15,7 +13,6 @@ import SupportAndFAQ from '@/components/SupportAndFAQ';
 
 export const Setting = () => {
     const navigate = useNavigate();
-    const { connectWallet } = useContext(WalletContext);
 
     const [userType, setUserType] = useState('investor');
     const [formData, setFormData] = useState({
@@ -297,7 +294,7 @@ export const Setting = () => {
                                     sectionRef={sectionRefs.account}
                                     formData={formData}
                                     handleChange={handleChange}
-                                    connectWallet={connectWallet}
+                                    // connectWallet={connectWallet}
                                     scrollToSection={scrollToSection}
                                 />
                                 <AppearanceSection
