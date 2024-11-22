@@ -19,7 +19,7 @@ const UserProfileIcon = () => {
   
   // Ensure data.user exists before accessing name
   const username = data?.user?.name || "Guest";
-  const baseURL = "https://laughing-trout-p6pwxp7wx5qf6qv6-5173.app.github.dev" || "https://finvest.dev.vercel.app/"; // Use hosted URL if available
+  const baseURL = "https://laughing-trout-p6pwxp7wx5qf6qv6-5173.app.github.dev" || "https://finvest-git-dev-killertians-projects.vercel.app"; // Use hosted URL if available
 
   const handleLogout = async () => {
     try {
