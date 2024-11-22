@@ -1,7 +1,7 @@
 "use client";
 import { ethers } from 'ethers';
 import { getContract } from '@/utils/blockchainUtils';
-import { WalletContext } from '@/context/WalletContext';
+// import { WalletContext } from '@/context/WalletContext';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
 import Sidebar from './Sidebar';
@@ -37,7 +37,7 @@ const MilestoneDetailedView = () => {
   const [newFeedback, setNewFeedback] = useState('');
   const [displayType, setDisplayType] = useState('upvote'); // 'upvote' or 'downvote'
   const [votedMilestones, setVotedMilestones] = useState({}); // Track user votes
-  const { walletAddress, connectWallet, signer } = useContext(WalletContext);
+  // const { walletAddress, connectWallet, signer } = useContext(WalletContext);
   useEffect(() => {
 
     const urls = [

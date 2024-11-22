@@ -12,11 +12,14 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import PostsPageSkeleton from '@/components/ui/PostsPageSkeleton';  // Import the skeleton component
+import useAuth from '@/utils/auth';
 
 function PostsPage() {
     const [posts, setPosts] = useState([]);
     const [userLikes, setUserLikes] = useState({});
     const [loading, setLoading] = useState(true);
+    const [userRole, setUserRole] = useState(null);
+    const { isLoggedIn, user } = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,6 +27,22 @@ function PostsPage() {
             'https://finvest-backend.onrender.com/posts',
             'http://localhost:8000/posts',
         ];
+
+        const userData = localStorage.getItem('user');
+
+        // Check if userData is not null or undefined
+        if (userData) {
+            try {
+                const data = JSON.parse(userData);
+                console.log('Parsed data:', data); // Debugging line
+                // Access the nested user object and set the role
+                setUserRole(data.user?.role); // Use optional chaining
+            } catch (error) {
+                console.error('Error parsing user data:', error);
+            }
+        } else {
+            console.log('No user data found in local storage');
+        }
 
         const fetchPosts = async () => {
             try {
@@ -71,35 +90,64 @@ function PostsPage() {
     return (
         <div className="flex min-h-screen w-full bg-[#05140D] ">
             <div className="flex-1 sm:py-3 sm:pl-14 bg-[#05140D] overflow-hidden">
-                <header className="sticky top-0 z-30 flex items-center justify-between gap-4 h-16 px-4 bg-[#05140D] border-b border-gray-700">
-                    <Sidebar />
-                    <FadeIn direction="down" delay={0.2} fullWidth>
-                        <h1 className="md:text-4xl text-2xl font-semibold text-left text-white w-full md:px-3 z-[5] line-clamp-1">
-                            Posts
-                        </h1>
-                    </FadeIn>
-                    <FadeIn direction="down" delay={0.2}>
-                        <div className="relative ml-auto flex-1 md:grow-0">
-                            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-300" />
-                            <Input
-                                type="search"
-                                placeholder="Search..."
-                                className="w-full rounded-lg bg-[#05140D] text-white placeholder-gray-300 pl-8 md:w-[200px] lg:w-[336px] border border-gray-600"
-                            />
-                        </div>
-                    </FadeIn>
+            <header className="sticky top-0 z-30 flex items-center justify-between gap-4 h-16 px-4 bg-[#05140D] border-b border-gray-700">
+    <Sidebar />
+    
+    {/* Page Title */}
+    <FadeIn direction="down" delay={0.2} fullWidth>
+        <h1 className="md:text-4xl text-2xl font-semibold text-left text-white w-full md:px-3 z-[5] line-clamp-1">
+            Posts
+        </h1>
+    </FadeIn>
+    
+    {/* Search Bar */}
+    <FadeIn direction="down" delay={0.2}>
+        <div className="relative ml-auto flex-1 md:grow-0">
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-300" />
+            <Input
+                type="search"
+                placeholder="Search posts..."
+                className="w-full rounded-lg bg-[#05140D] text-white placeholder-gray-300 pl-8 md:w-[200px] lg:w-[336px] border border-gray-600"
+            />
+        </div>
+    </FadeIn>
+    
+    <div className="flex items-center gap-4">
+        {/* Conditional Buttons */}
+        {isLoggedIn ? (
+            <>
+                {/* New Post Button (for Organisation role only) */}
+                {userRole === 'Organisation' && (
                     <FadeIn direction="down" delay={0.1}>
                         <Link to="/posts/new-post">
-                            <Button variant="outline" className="flex items-center gap-2 text-[#2FB574] border-[#2FB574] bg-[#05140D] hover:bg-[#2FB574] hover:text-white hover:border-[#2FB574]">
+                            <Button
+                                variant="outline"
+                                className="flex items-center gap-2 text-[#2FB574] border-[#2FB574] bg-[#05140D] hover:bg-[#2FB574] hover:text-white hover:border-[#2FB574]"
+                            >
                                 <PlusCircle className="h-5 w-5" />
                                 New Post
                             </Button>
                         </Link>
                     </FadeIn>
-                    <FadeIn direction="left" delay={0.2}>
-                        <UserProfileIcon />
-                    </FadeIn>
-                </header>
+                )}
+                {/* User Profile Icon */}
+                <FadeIn direction="left" delay={0.2}>
+                    <UserProfileIcon />
+                </FadeIn>
+            </>
+        ) : (
+            /* Sign Up Button for not logged-in users */
+            <FadeIn direction="down" delay={0.1}>
+                <Link to="/signup">
+                    <Button variant="custom" size="lg" className="md:block m-0">
+                        Sign Up
+                    </Button>
+                </Link>
+            </FadeIn>
+        )}
+    </div>
+</header>
+
 
                 {/* Display Skeleton while loading */}
                 {loading ? (

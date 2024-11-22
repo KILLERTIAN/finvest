@@ -19,7 +19,7 @@ const UserProfileIcon = () => {
   
   // Ensure data.user exists before accessing name
   const username = data?.user?.name || "Guest";
-  const baseURL = localStorage.getItem('baseURL') || "http://localhost:8000"; // Use hosted URL if available
+  const baseURL = "https://laughing-trout-p6pwxp7wx5qf6qv6-5173.app.github.dev" || "https://finvest.dev.vercel.app/"; // Use hosted URL if available
 
   const handleLogout = async () => {
     try {
@@ -33,9 +33,9 @@ const UserProfileIcon = () => {
         body: JSON.stringify({ refreshToken }), // Send refresh token in request body
       });
 
-      if (!response.ok) {
-        throw new Error('Logout failed');
-      }
+      // if (!response.ok) {
+      //   throw new Error('Logout failed');
+      // }
 
       // Clear local storage
       localStorage.removeItem('user');

@@ -1,8 +1,9 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link, useNavigate } from "react-router-dom";
-import { PlusCircle, Share2, ArrowBigUpDash } from "lucide-react";
+import { PlusCircle, Share2, ArrowBigUpDash,Search } from "lucide-react";
+import { Input } from '@/components/ui/input';
 import Sidebar from '@/components/Sidebar';
 import FadeIn from '@/components/FadeIn';
 import Filter from '@/components/Filter';
@@ -95,30 +96,60 @@ function Projects() {
     return (
         <div className="flex min-h-screen w-full overflow-hidden scrollbar-hidden bg-[#05140D] text-white">
             <div className="flex-1 sm:gap-4 sm:py-4 sm:pl-14 overflow-hidden scrollbar-hidden">
-                <header className="sticky top-0 z-30 flex items-center justify-between h-16 px-4 bg-[#05140D] border-b border-gray-800">
+                <header className="sticky top-0 z-30 flex items-center justify-between h-16 px-4 bg-[#05140D] border-b border-gray-800 gap-4">
                     <Sidebar />
                     <FadeIn direction="down" delay={0.1} fullWidth>
                         <h1 className="md:text-4xl text-2xl font-semibold text-left text-white w-full px-2 pl-4 md:px-3 z-[5]">Projects</h1>
                     </FadeIn>
-                    <FadeIn direction="down" delay={0.1}>
-                        {
-                            userRole === 'Organisation' && (
-                                <Link to="/projects/post-project">
-                            <Button variant="outline" className="flex items-center gap-2 text-[#2FB574] border-[#2FB574] bg-[#05140D] hover:bg-[#2FB574] hover:text-white hover:border-[#2FB574] mr-4">
-                                <PlusCircle className="h-5 w-5" />
-                                Post a Project
-                            </Button>
-                        </Link>
-                            )
-                        }
+
+                    {/* Search Bar */}
+                    <FadeIn direction="down" delay={0.2}>
+                        <div className="relative ml-auto flex-1 md:grow-0">
+                            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-300" />
+                            <Input
+                                type="search"
+                                placeholder="Search Projects..."
+                                className="w-full rounded-lg bg-[#05140D] text-white placeholder-gray-300 pl-8 md:w-[200px] lg:w-[336px] border border-gray-600"
+                            />
+                        </div>
                     </FadeIn>
-                    {
-                        isLoggedIn && 
-                        <FadeIn direction="left" delay={0.2}>
-                        <UserProfileIcon />
-                    </FadeIn>
-                    }
+
+                    <div className="flex items-center gap-4">
+                        {/* Conditional Buttons */}
+                        {isLoggedIn ? (
+                            <>
+                                {/* Post a Project Button (for Organisations only) */}
+                                {userRole === 'Organisation' && (
+                                    <FadeIn direction="down" delay={0.1}>
+                                        <Link to="/projects/post-project">
+                                            <Button
+                                                variant="outline"
+                                                className="flex items-center gap-2 text-[#2FB574] border-[#2FB574] bg-[#05140D] hover:bg-[#2FB574] hover:text-white hover:border-[#2FB574] "
+                                            >
+                                                <PlusCircle className="h-5 w-5" />
+                                                Post a Project
+                                            </Button>
+                                        </Link>
+                                    </FadeIn>
+                                )}
+                                {/* User Profile Icon */}
+                                <FadeIn direction="left" delay={0.2}>
+                                    <UserProfileIcon />
+                                </FadeIn>
+                            </>
+                        ) : (
+                            /* Sign Up Button for not logged-in users */
+                            <FadeIn direction="down" delay={0.1}>
+                                <Link to="/signup">
+                                    <Button variant="custom" size="lg" className="md:block m-0">
+                                        Sign Up
+                                    </Button>
+                                </Link>
+                            </FadeIn>
+                        )}
+                    </div>
                 </header>
+
 
 
                 <FadeIn direction="up" delay={0.2} fullWidth>

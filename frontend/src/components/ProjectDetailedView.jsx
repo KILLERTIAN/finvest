@@ -69,15 +69,15 @@ const ProjectDetailedView = ({ handleUpvote = () => {}, userUpvotes = {} }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const { isLoggedIn, user } = useAuth();
-  const { walletAddress } = useContext(WalletContext);
+  // const { walletAddress } = useContext(WalletContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { connectWallet } = useContext(WalletContext);
+  // const { connectWallet } = useContext(WalletContext);
 
   const handleDonateClick = () => {
-    if (!walletAddress) {
-      // Connect wallet if not already connected
-      connectWallet();
-    }
+    // if (!walletAddress) {
+    //   // Connect wallet if not already connected
+    //   connectWallet();
+    // }
     // Open donation modal
     setIsModalOpen(true);
   };
